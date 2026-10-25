@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Current weather at major cities in Pakistan on an interactive map.">
+  <title>Pakistan Weather Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="title-block">
+      <h1>Pakistan Weather Map</h1>
+      <p>Current conditions · Islamabad, Lahore, Karachi, Quetta, and Peshawar</p>
+    </div>
+    <label class="city-search">
+      <span>Find a city</span>
+      <input id="city-search" type="search" placeholder="Search…" autocomplete="off">
+    </label>
+  </header>
+
+  <main>
+    <section class="study-strip">
+      <strong>Study area</strong>
+      <span>Major cities across Pakistan</span>
+      <span id="status" role="status">Loading weather data…</span>
+    </section>
+
+    <section class="map-section" aria-label="Weather map">
+      <div id="map" role="application" aria-label="Map of current weather in Pakistan"></div>
+      <p class="map-hint">Select a temperature marker or city card to inspect current conditions.</p>
+    </section>
+
+    <section class="city-section" aria-label="Current city weather">
+      <h2>Current city conditions</h2>
+      <div id="city-cards" class="city-cards"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>
+    · Map tiles © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>
+    · Weather values are model-based estimates.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
